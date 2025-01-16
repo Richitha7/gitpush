@@ -1,0 +1,37 @@
+pipeline {
+
+    agent any
+
+    tools {
+        maven 'maven' // Replace with your configured Maven version in Jenkins
+    }
+
+    stages {
+        stage('git repo & clean') {
+            steps {
+                //bat "rmdir /s /q samplemavenjava"
+                bat "git clone https://github.com/harshini03110/samplemavenjava.git"
+                bat "mvn clean -f samplemavenjava"
+            }
+        }
+
+        stage('install') {
+            steps {
+                bat "mvn install -f samplemavenjava"
+            }
+        }
+
+        stage('test') {
+            steps {
+                bat "mvn test -f samplemavenjava"
+            }
+        }
+
+        stage('package') {
+            steps {
+                bat "mvn package -f samplemavenjava"
+            }
+        }
+        
+    }
+}
