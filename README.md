@@ -25,7 +25,7 @@
 `4.docker stop selab`
 
 ###DOCKER COMPOSE
-(docker-compose.yaml)
+(docker-compose.yaml)COPY
 cd C:\
 `docker-compose up -d`
 (localhost:8000)
@@ -45,3 +45,18 @@ cd C:\
 `12.docker login`
 `13.docker push richitha7/newubuntu2025`
 
+
+##AWS
+1`sudo docker build -t mywebapp .`
+
+2.`sudo docker run -d -p 80:80 mywebapp`
+
+nano Dockerfile:
+
+FROM nginx:alpine
+
+COPY . /usr/share/nginx/html
+
+FROM tomcat:9-jdk11
+
+COPY target/*.war /usr/local/tomcat/webapps/
