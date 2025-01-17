@@ -12,29 +12,29 @@
  `8.kubectl delete deployment mynginx`
 
 ###NAGIOS
-docker pull jasonrivers/nagios:latest
-docker run --name selab -p 8888:80 jasonrivers/nagios:latest
-docker ps
-docker stop selab
+`1.docker pull jasonrivers/nagios:latest`
+`2.docker run --name selab -p 8888:80 jasonrivers/nagios:latest`
+`3.docker ps`
+`4.docker stop selab`
 
 ###DOCKER COMPOSE
 (docker-compose.yaml)
 cd C:\
-docker-compose up -d
+`docker-compose up -d`
 (localhost:8000)
 
 ### MODIFY AND PUSH DOCKER IMAGE
-docker pull ubuntu
-docker run -it --name newubuntu -d ubuntu
-docker ps
-docker exec -it (container id) bash
-git --version
-apt update
-apt install git -y
-git --version
-exit
-docker stop (c-id)
-docker commit (c-id) richitha7/newubuntu2025
-docker login
-docker push richitha7/newubuntu2025
+`1.docker pull ubuntu`
+`2.docker run -it --name newubuntu -d ubuntu`
+`3.docker ps`
+`4.docker exec -it (container id) bash`
+`5.git --version`
+`6.apt update`
+`7.apt install git -y`
+`8.git --version`
+`9.exit`
+`10.docker stop (c-id)`
+`11.docker commit (c-id) richitha7/newubuntu2025`
+`12.docker login`
+`13.docker push richitha7/newubuntu2025`
 
