@@ -1,7 +1,7 @@
 # gitpush
-###DEPLOYING AND SCALING APPLICATIONS USING MINIKUBE
- 1.minikube start
- 2.kubectl create deployment mynginx --image=nginx
+##DEPLOYING AND SCALING APPLICATIONS USING MINIKUBE
+ ###1.minikube start
+ ###2.kubectl create deployment mynginx --image=nginx
  3.kubectl get deployments
  4.kubectl expose deployment mynginx --type=NodePort --port=80 --target-port=80
  5.kubectl scale deployment mynginx --replicas=4
